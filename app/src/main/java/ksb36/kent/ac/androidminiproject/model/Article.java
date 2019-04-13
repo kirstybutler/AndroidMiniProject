@@ -1,21 +1,35 @@
 package ksb36.kent.ac.androidminiproject.model;
 
+import android.view.View;
+
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.sql.Timestamp;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Article {
+
+    @SerializedName("description")
     @Expose
     private String description;
+    @SerializedName("author")
     @Expose
     private String author;
+    @SerializedName("imageUrl")
     @Expose
-    private String imageURL;
+    private String imageUrl;
+    @SerializedName("title")
     @Expose
     private String title;
+    @SerializedName("dateTime")
     @Expose
-    private Timestamp dateTime;
+    private String dateTime;
+    @SerializedName("articleUrl")
     @Expose
-    private String articleURL;
+    private String articleUrl;
 
     public String getDescription() {
         return description;
@@ -33,12 +47,12 @@ public class Article {
         this.author = author;
     }
 
-    public String getImageURL() {
-        return imageURL;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {
@@ -49,29 +63,20 @@ public class Article {
         this.title = title;
     }
 
-    public Timestamp getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Timestamp dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 
-    public String getArticleURL() {
-        return articleURL;
+    public String getArticleUrl() {
+        return articleUrl;
     }
 
-    public void setArticleURL(String articleURL) {
-        this.articleURL = articleURL;
-    }
-
-    public Article(String description, String author, String imageURL, String title, Timestamp dateTime, String articleURL) {
-        this.description = description;
-        this.author = author;
-        this.imageURL = imageURL;
-        this.title = title;
-        this.dateTime = dateTime;
-        this.articleURL = articleURL;
+    public void setArticleUrl(String articleUrl) {
+        this.articleUrl = articleUrl;
     }
 
 }
